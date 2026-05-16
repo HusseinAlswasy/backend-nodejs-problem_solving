@@ -7,8 +7,8 @@ console.log(addedNumber);
 //*******************************************************
 
 //2.
-let value= 0;
-if(value==false){
+let value=false;            // edit
+if(!value){
     console.log("Invalid");
 }
 
@@ -34,11 +34,10 @@ for(let i=0; i<numbers.length; i++){
 //*******************************************************
 
 //5.
-let array1=[1,2,3];
-let array2=[4,5,6];
-let mergeArrays = array1.concat(array2);
-console.log(mergeArrays);
-
+let arr1 = [1, 2, 3];                         // edit
+let arr2 = [4, 5, 6];
+let mergedTwoArray = [...arr1, ...arr2];
+console.log(mergedTwoArray);
 //*******************************************************
 
 //6.
@@ -101,11 +100,11 @@ function powerNumber(num){
 //*******************************************************
 
 //10.
-function printName(name, age){
-    console.log(name + " is " + age + " years old.");
+function describePerson({ name, age }) {         // edit
+    return `${name} is ${age} years old`;
 }
-printName("Hussein", 25);
 
+console.log(describePerson({ name: "Hussein", age: 25 }));
 //*******************************************************
 
 //11.
