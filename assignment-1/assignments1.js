@@ -165,3 +165,60 @@ console.log(splitWords("The quick brown fox"));
 //*******************************************************
 
 //Finished
+
+// function calcPrice(price, sericeCharge) {
+//     let totalPrice = price + sericeCharge;
+//     return totalPrice;
+// }
+
+// console.log(calcPrice(100, 20));
+
+
+// const getSum = (a, b) => {
+//   let sum = a + b;
+//   return sum;
+// };
+
+// console.log(getSum(5, 10));
+
+// function loginUser(username, onSuccess) {
+//   console.log(username + " logged in");
+//   onSuccess();
+// }
+
+// loginUser("driver_1", () => {
+//   console.log("Redirect to dashboard");
+// });
+
+const orders = [
+  { id: 1, customer: "Ahmed", status: "completed", amount: 50 },
+  { id: 2, customer: "Ali", status: "cancelled", amount: 30 },
+  { id: 3, customer: "Sara", status: "completed", amount: 80 },
+  { id: 4, customer: "Omar", status: "pending", amount: 40 }
+];
+
+const completedOrders = orders.filter(order => order.status === "completed");
+
+console.log(completedOrders);
+
+//--------------------------------------------------------------
+
+const bigOrder = orders.find(order => order.amount > 60);
+
+console.log(bigOrder);
+
+//--------------------------------------------------------------
+
+const customerNames = orders.map(order => order.customer);
+
+console.log(customerNames);
+
+//--------------------------------------------------------------
+const totalCompletedAmount = orders
+  .filter(order => order.status === "completed")
+  .map(order => order.amount)
+  .reduce((total, amount) => total + amount, 0);
+
+console.log(totalCompletedAmount); 
+
+
