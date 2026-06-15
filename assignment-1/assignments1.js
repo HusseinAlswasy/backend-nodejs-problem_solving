@@ -1,0 +1,168 @@
+                          // Assignment 1-Hussein Hassan
+//1.                          
+let stringNumber = "123";
+let convertStringToNumber = Number(stringNumber);
+let addedNumber = convertStringToNumber + 7;
+console.log(addedNumber);
+//*******************************************************
+
+//2.
+let value= 0;
+if(value==false){
+    console.log("Invalid");
+}
+
+//*******************************************************
+
+//3.
+for(let i=1; i<=10; i++){
+    if(i%2==1){
+        console.log(i);
+    }
+}
+
+//*******************************************************
+
+//4.
+let numbers=[1,2,3,4,5];
+for(let i=0; i<numbers.length; i++){
+   if(numbers[i]%2==0){
+    console.log(numbers[i]);
+}
+}
+
+//*******************************************************
+
+//5.
+let array1=[1,2,3];
+let array2=[4,5,6];
+let mergeArrays = array1.concat(array2);
+console.log(mergeArrays);
+
+//*******************************************************
+
+//6.
+let day = 2;
+switch(day){
+    case 1:
+        console.log("saturday");
+        break;
+    case 2:
+        console.log("sunday");
+        break;
+    case 3:
+        console.log("monday");
+        break;
+    case 4:
+        console.log("tuesday");
+        break;          
+    case 5:     
+        console.log("wednesday");
+        break;  
+    case 6:
+        console.log("thursday");
+        break;
+    case 7:
+        console.log("friday");
+        break;
+}
+
+//*******************************************************
+
+//7.
+let arrayABC=["aaaa", "ab", "abc"];
+for(let i=0; i<arrayABC.length; i++){
+    console.log(arrayABC[i].length);
+}
+
+//*******************************************************
+
+//8.
+function checker(num){
+    if(num%3==0 && num%5==0){
+        console.log("Divisible by both");
+    }else{
+        console.log("Not divisible by both");
+    }
+}
+
+// checker(15);
+
+//*******************************************************
+
+//9.
+function powerNumber(num){
+    let result = num ** 2;
+    return result;
+}
+
+// console.log(powerNumber(5));
+
+//*******************************************************
+
+//10.
+function printName(name, age){
+    console.log(name + " is " + age + " years old.");
+}
+printName("Hussein", 25);
+
+//*******************************************************
+
+//11.
+function sumNumbers(...numbers){
+   let sum = 0;
+   for(let i=0; i<numbers.length; i++){
+    sum += numbers[i];
+   }
+   return sum;
+}
+console.log(sumNumbers(1,2,3,4,5,6,7,8,9,10));
+
+//*******************************************************
+
+//12.
+function printAfterDelay(message, delay){
+    setTimeout(function(){
+        console.log(message);
+    }, delay)
+};
+
+printAfterDelay("Success", 3);
+
+//*******************************************************
+
+//13.
+let number = [1,7,6,3,5];
+function getBigNumber(number){
+    let bigNumber = number[0];
+    for(let i=0; i<number.length; i++){
+        if(number[i]>bigNumber){
+            bigNumber = number[i];
+        }
+    
+    }
+    return bigNumber;
+}
+console.log(getBigNumber(number));
+
+//*******************************************************
+
+//14.
+function objectToArray(obj) {      // I searched for it and figured it out. I hadn’t known about it before. 
+    return Object.values(obj);
+}
+
+console.log(objectToArray({ a: 1, b: 2, c: 3 }));
+
+//*******************************************************
+
+//15.
+function splitWords(wordes) {    // I searched for it and figured it out. I hadn’t known about it before.
+    return wordes.split(" ");
+}
+
+console.log(splitWords("The quick brown fox"));
+
+//*******************************************************
+
+//Finished
