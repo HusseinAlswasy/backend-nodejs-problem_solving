@@ -1,0 +1,348 @@
+{
+  "info": {
+    "_postman_id": "aea396c1-05d7-44cf-9a56-ad8099e65729",
+    "name": "sequlize",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "20298504"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Insert",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Ahmed\",\r\n    \"email\":\"ahmed@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"role\":\"user\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/users/signup",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "signup"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateOrInsert",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Zein\",\r\n    \"email\":\"zein@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"role\":\"user\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/users/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetByEmail",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Zein\",\r\n    \"email\":\"zein@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"role\":\"user\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/users/email?email=Randa@gmail.com",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "email"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "Randa@gmail.com"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/users/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Posts",
+      "item": [
+        {
+          "name": "addPost",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"apple 17 pro\",\r\n    \"content\":\"apple titanum 256\",\r\n    \"userId\":\"2\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/posts/addPost",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "posts",
+                "addPost"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deletePost",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"apple 17 pro\",\r\n    \"content\":\"apple titanum 256\",\r\n    \"userId\":\"2\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/posts/deletePost/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "posts",
+                "deletePost",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllPosts",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Comment",
+      "item": [
+        {
+          "name": "addcomments",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"comments\":[\r\n        {\r\n            \"content\": \"This is the first comment.\",\r\n            \"postId\": 5,\r\n            \"userId\": 1\r\n        },\r\n        {\r\n            \"content\": \"This is the second comment.\",\r\n            \"postId\": 1,\r\n            \"userId\": 2\r\n        },\r\n        {\r\n            \"content\": \"This is the Third comment.\",\r\n            \"postId\": 2,\r\n            \"userId\": 3\r\n        }\r\n\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/comment/putComment",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "comment",
+                "putComment"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateCommentById",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userId\": 2,\r\n  \"content\": \"update update update\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/comment/updateCommentById/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "comment",
+                "updateCommentById",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findOrCreateComment",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"content\":\"findOrCreateComment\",\r\n    \"userId\":3,\r\n    \"postId\":2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/comment/findOrCreateComment",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "comment",
+                "findOrCreateComment"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "FindByWord",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/comment/findByWord?word=findOrCreateComment",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "comment",
+                "findByWord"
+              ],
+              "query": [
+                {
+                  "key": "word",
+                  "value": "findOrCreateComment"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getNewestComments",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "getCommentByPKwithUserandPost",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"content\":\"findOrCreateComment\",\r\n    \"userId\":3,\r\n    \"postId\":2\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/comment/getCommentByPKwithUserandPost/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "comment",
+                "getCommentByPKwithUserandPost",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
