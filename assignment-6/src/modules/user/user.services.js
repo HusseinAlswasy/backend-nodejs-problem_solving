@@ -28,8 +28,8 @@ export const signup = async (req, res) => {
     }
 
 };
-//======================================Create Or Insert======================================
 
+//======================================Create Or Insert======================================
 export const createOrInsert = async (req, res) => {
     try {
         const { name, email, password, role } = req.body;
@@ -49,6 +49,7 @@ export const createOrInsert = async (req, res) => {
         return res.status(500).json({ message: error.message });
     }
 }
+
 //======================================Get User By Email======================================
 export const getUserByEmail = async (req, res) => {
     try {
